@@ -13,7 +13,7 @@ class App2 extends React.PureComponent {
 
 const Hoc =  (props) => {  
       console.log(props)
-      props.id = 5;      
+      props.id = 5;   
       return <App2 {...props} />     
 }
 
