@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Button } from 'antd';
-import App2 from "./App";
+import Hoc from "./App";
 
 import {observer, inject} from 'mobx-react';
+
 
 
 @inject('app') @observer
@@ -31,7 +32,8 @@ export default class App extends React.Component {
   render() {
     return <div>
        <Button type="primary" onClick={() => this.props.app.addTimer()}>ssss</Button>
-        <App2 id={this.props.app.timer} />
+        {/* <App2 id={this.props.app.timer} /> */}
+        {Hoc({id : this.props.app.timer})}
     </div>;
   }
 }

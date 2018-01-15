@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class App extends React.PureComponent {
-
-
+class App2 extends React.PureComponent {
   render() {
     return <div>
     {this.props.id}
@@ -12,4 +10,12 @@ class App extends React.PureComponent {
 }
 
 
-export default App
+
+const Hoc =  (props) => {  
+      console.log(props)
+      props.id = 5;      
+      return <App2 {...props} />     
+}
+
+
+export default Hoc
