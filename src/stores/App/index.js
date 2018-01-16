@@ -4,9 +4,7 @@ class AppStore {
     @observable timer = 0;
 
     constructor() {
-
     }
-
     @action resetTimer = () => {
         this.timer = 0;
     }
