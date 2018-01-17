@@ -9,8 +9,8 @@ app.use(
   '/api',
   proxy({
     changeOrigin: true,
-    target: 'http:/',
-    pathRewrite: { '^/': '' },
+    target: 'http://jsonplaceholder.typicode.com/',
+    pathRewrite: { '^/api': '' },
   })
 )
 

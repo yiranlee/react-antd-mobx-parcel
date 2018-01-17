@@ -2,6 +2,12 @@
   "presets": ["env", "react", "es2015", "stage-0"],
   "plugins": [
     "transform-decorators-legacy",
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }],
     ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
   ]
 }

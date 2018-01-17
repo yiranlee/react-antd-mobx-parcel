@@ -1,4 +1,0 @@
-{
-  "extends": "eslint-config-rs"
-   "eslint.options": { "configFile": "./eslintrc.json" }
-}

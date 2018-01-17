@@ -1,20 +1,15 @@
+import axios from 'axios';
 import { observable, action } from 'mobx';
 
 class Home {
     @observable id = 0;
+    @observable list = [];
 
-    constructor() {
-
-    }
-
-    @action resetTimer = () => {
-        this.id = 0;
-    }
-    @action addTimer = () => {
-        this.id += 1;
-    }
-    @action cutTimer = () => {
-        this.id -= 1;
+    @action
+    async getlist() {
+      const response = await axios.get('/api/users');
+      console.log(response);
+      this.list = response.data;
     }
 }
 
